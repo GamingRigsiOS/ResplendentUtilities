@@ -16,6 +16,7 @@
 #define CGRectSetX(x, rect) (CGRectMake(x, (rect).origin.y, (rect).size.width, (rect).size.height))
 #define CGRectSetY(y, rect) (CGRectMake((rect).origin.x, y, (rect).size.width, (rect).size.height))
 #define CGRectSetXY(x, y, rect) (CGRectMake(x, y, (rect).size.width, (rect).size.height))
+#define CGRectSetOrigin(o, rect) ((CGRect){o,(rect).size})
 #define CGRectSetYHeight(y,height, rect) (CGRectMake((rect).origin.x, y, (rect).size.width, height))
 #define CGRectSetWidth(w, rect) (CGRectMake((rect).origin.x, (rect).origin.y, w, (rect).size.height))
 #define CGRectSetHeight(h, rect) (CGRectMake((rect).origin.x, (rect).origin.y, (rect).size.width, (h)))
@@ -150,7 +151,5 @@ CG_INLINE void increaseHeight(UIView* view,CGFloat heightIncrease)
 -(void)increaseWidth:(CGFloat)width;
 -(void)increaseHeight:(CGFloat)height;
 -(void)increaseWidth:(CGFloat)width height:(CGFloat)height;
-
--(UIView*)selfOrSubviewFirstResponder;
 
 @end
