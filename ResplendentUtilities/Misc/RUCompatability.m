@@ -31,7 +31,10 @@
     }
     else
     {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
         [self setMinimumFontSize:minimumFontSizeScaleFactor];
+#pragma clang diagnostic pop
     }
 }
 
